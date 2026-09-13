@@ -1,0 +1,19 @@
+# Home Assistant add-on repository manifest.
+#
+# This file lives at the ROOT of the git repository that users add as a custom
+# add-on store. The Supervisor reads it plus the per-arch config.yaml files
+# under data/<arch>/ to list and install the add-on.
+#
+# Layout:
+#   <repo-root>/
+#   ├── repo.yaml                 <- this file
+#   └── data/
+#       ├── amd64/config.yaml
+#       └── aarch64/config.yaml
+#
+# The add-on uses a prebuilt image (no per-arch Dockerfile). Build/push the
+# image first with build.sh.
+name: Music Assistant (YouTube Music Family)
+url: "https://github.com/peraltagroup/ma-ytmusic-family"
+maintainers:
+  - "Victor Peralta <vic@peraltagroup.com>"
