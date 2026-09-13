@@ -1,0 +1,12 @@
+# Home Assistant app store manifest (Supervisor >= 2026.09).
+#
+# The new Supervisor looks for repository.(json|yaml) anywhere in the cloned
+# store repo (find_one_filetype: path.glob("**/repository.*")). The schema is:
+#   name: str (required)
+#   url: str (optional)
+#   maintainer: str (optional)
+#
+# The legacy repo.yaml is kept for older Supervisor versions.
+name: Music Assistant (YouTube Music Family)
+url: "https://github.com/peraltagroup/ma-ytmusic-family"
+maintainer: "Victor Peralta <vic@peraltagroup.com>"
