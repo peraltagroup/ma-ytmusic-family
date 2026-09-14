@@ -8,11 +8,11 @@
 #
 # Usage:
 #   ./build.sh [IMAGE_TAG]
-#   IMAGE_TAG defaults to the MA version (2.11.0b2)
+#   IMAGE_TAG defaults to the MA version (2.11.0b3)
 
 set -euo pipefail
 
-MA_VERSION="${MA_VERSION:-2.11.0b2}"
+MA_VERSION="${MA_VERSION:-2.11.0b3}"
 IMAGE_TAG="${1:-${MA_VERSION}}"
 IMAGE="ghcr.io/${GITHUB_REPOSITORY_OWNER:-peraltagroup}/ma-ytmusic-family:${IMAGE_TAG}"
 

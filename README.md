@@ -1,6 +1,6 @@
 # Music Assistant (YouTube Music Family) add-on
 
-Home Assistant add-on that runs **Music Assistant Server 2.11.0b2** with the
+Home Assistant add-on that runs **Music Assistant Server 2.11.0b3** with the
 **"YouTube Music (Family)"** provider baked in.
 
 - One-time device-code login per family member (`https://www.youtube.com/activate`)
@@ -13,7 +13,7 @@ Home Assistant add-on that runs **Music Assistant Server 2.11.0b2** with the
 
 - A **YouTube Music Premium** account per family member (required, D7).
 - The add-on image must be built and pushed to GHCR first (see `build.sh`):
-  `ghcr.io/peraltagroup/ma-ytmusic-family:2.11.0b2`
+  `ghcr.io/peraltagroup/ma-ytmusic-family:2.11.0b3`
 
 ## Install
 
