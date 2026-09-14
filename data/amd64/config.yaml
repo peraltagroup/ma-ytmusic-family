@@ -36,8 +36,7 @@ options:
   log_level: info
   safe_mode: false
 schema:
-  log_level:
-    - list(debug|info|warning|error)
+  log_level: list(debug|info|warning|error)
   safe_mode: bool
 privileged:
   - SYS_ADMIN
