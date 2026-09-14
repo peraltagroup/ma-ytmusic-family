@@ -12,7 +12,7 @@
 
 set -euo pipefail
 
-MA_VERSION="${MA_VERSION:-2.11.0b4}"
+MA_VERSION="${MA_VERSION:-2.11.0b5}"
 IMAGE_TAG="${1:-${MA_VERSION}}"
 IMAGE="ghcr.io/${GITHUB_REPOSITORY_OWNER:-peraltagroup}/ma-ytmusic-family:${IMAGE_TAG}"
 
