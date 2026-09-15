@@ -1,10 +1,10 @@
 name: Music Assistant (YouTube Music Family)
-version: "2.11.0b5"
+version: "2.11.0b6"
 slug: music_assistant_ytmusic_family
 description: >-
-  Music Assistant Server 2.11.0b5 with the "YouTube Music (Family)" provider
-  baked in. One-time device-code login per family member, shared library for
-  party use, offline playlist downloads. No cookies, no PO tokens, no sidecars.
+  Music Assistant Server 2.11.0b2 with the "YouTube Music (Family)" provider
+  baked in. One-time cookie login per family member, shared library for party
+  use, offline playlist downloads. No PO tokens, ad-free streaming.
 url: https://music-assistant.io
 arch:
   - aarch64

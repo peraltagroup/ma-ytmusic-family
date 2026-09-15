@@ -1,19 +1,19 @@
 # Music Assistant (YouTube Music Family) add-on
 
-Home Assistant add-on that runs **Music Assistant Server 2.11.0b5** with the
+Home Assistant add-on that runs **Music Assistant Server 2.11.0b2** with the
 **"YouTube Music (Family)"** provider baked in.
 
-- One-time device-code login per family member (`https://www.youtube.com/activate`)
+- One-time cookie login per family member (sign in to music.youtube.com once)
 - Shared library for party use (one provider instance per household member)
 - Offline playlist downloads
-- No cookies, no PO tokens, no sidecars
+- Ad-free streaming (anonymous yt-dlp resolution, no PO tokens)
 - Hard YouTube Music Premium gate (D7)
 
 ## Prerequisites
 
 - A **YouTube Music Premium** account per family member (required, D7).
 - The add-on image must be built and pushed to GHCR first (see `build.sh`):
-  `ghcr.io/peraltagroup/ma-ytmusic-family:2.11.0b5`
+  `ghcr.io/peraltagroup/ma-ytmusic-family:2.11.0b6`
 
 ## Install
 
@@ -29,12 +29,15 @@ Home Assistant add-on that runs **Music Assistant Server 2.11.0b5** with the
 ## Onboard a family member
 
 1. In the MA panel: **Providers -> Add provider -> YouTube Music (Family)**.
-2. Enter a display name. The add-on shows a **user code**.
-3. On any device, open **<https://www.youtube.com/activate>**, sign in with the
-   member's Premium account, and enter the code.
-4. Wait for activation. The provider verifies Premium, stores encrypted tokens
-   in the MA config dir, and finishes.
+2. Enter a display name (optional).
+3. Paste the member's `music.youtube.com` cookie (the setup screen explains
+   how to copy it from DevTools). The cookie must contain `__Secure-3PAPISID`.
+4. The provider verifies the account is YouTube Music Premium, stores the
+   cookie encrypted in the MA config dir, and finishes.
 5. Repeat for each family member (multi-instance).
+
+Cookies typically stay valid for about a year; when one expires the provider
+reports `token_invalidated` and re-onboarding takes one minute.
 
 ## Notes
 
